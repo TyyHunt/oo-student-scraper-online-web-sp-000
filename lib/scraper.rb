@@ -37,13 +37,13 @@ class Scraper
          else
         profile[:blog] = item.attribute('href').value
 
-         end 
+         end
       end
-      
+
        profile[:profile_quote] = page.css("div.vitals-text-container").css(".profile-quote").text
        profile[:bio] = page.css("div.description-holder").css("p").text
 
        profile
-     end	  
+     end
 
 end
