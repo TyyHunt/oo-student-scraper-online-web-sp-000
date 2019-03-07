@@ -24,7 +24,7 @@ class Scraper
     social = page.css("div.social-icon-container a")
 
      social.each do |item|
-      case info.attribute('href').value
+      case item.attribute('href').value
         when /twitter/
         profile[:twitter] = item.attribute('href').value
 
